@@ -21,6 +21,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import History from './pages/History';
 
 const App: React.FC = () => (
   <IonApp>
@@ -29,6 +30,7 @@ const App: React.FC = () => (
         <Route exact path="/home">
           <Home />
         </Route>
+        <Route path="/history" component={History} />
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
