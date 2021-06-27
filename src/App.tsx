@@ -22,15 +22,17 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import History from './pages/History';
+import News from './pages/News';
+import NewsItem from './pages/NewsItem';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route path="/history" component={History} />
+        <Route exact path="/home" component={Home} />          
+        <Route exact path="/history" component={History} />
+        <Route exact path="/news/:id" component={NewsItem} />
+        <Route exact path="/news" component={News} />
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
